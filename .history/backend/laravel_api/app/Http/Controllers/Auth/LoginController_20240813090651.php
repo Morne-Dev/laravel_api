@@ -28,8 +28,7 @@ class LoginController extends Controller
 
         if (!auth()->attempt($request->only(['email', 'password']))) {
             throw ValidationException::withMessages([
-                'email' => ['The Credentials you entered are incorre
-                ct.']
+                'email' => ['The Credentials you entered are incorrect.']
             ]);
         }
     }
